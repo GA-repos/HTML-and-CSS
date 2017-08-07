@@ -5,7 +5,7 @@
 - Identify the parts and roles of HTML boiler plate
 - Identify the parts of an HTML element
 - Distinguish in-line styles, style tags, and linked style sheets
-- Break down the syntax of a CSS declatation and a CSS rule(set)
+- Break down the syntax of a CSS declaration and a CSS rule(set)
 - List commonly used properties
 - Distinguish the components of the box model
 
