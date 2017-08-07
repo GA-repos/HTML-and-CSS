@@ -188,7 +188,7 @@ Wow!
 Super dull!
 We'll work on making this more lively shortly but first some practice fixing invalid HTML.
 
-#### Exercise: [HTML Fixit](https://github.com/ga-wdi-exercises/html_fixit) (15 minutes / 1:05)
+#### Exercise: [HTML Fixit](https://git.generalassemb.ly/ga-wdi-exercises/html_fixit) (15 minutes / 1:05)
 
 - 10 minutes working / 5 minutes review
 - Work with a partner and write out plain English answers
@@ -652,8 +652,8 @@ To add a font:
 4. Add the provided link element (something like `<link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">`) to the head of your HTML.
 5. Add the provided declaration (something like `font-family: 'Fresca', sans-serif;`) to a CSS rule targeting the elements to which you would like to apply the font.
 
-## [Hippie Portfolio](https://github.com/ga-wdi-exercises/hippy-portfolio)
+## [Hippie Portfolio](https://git.generalassemb.ly/ga-wdi-exercises/hippy-portfolio)
 
-## Exercise: [Fashion Blog](https://github.com/ga-wdi-exercises/fashion-blog)
+## Exercise: [Fashion Blog](https://git.generalassemb.ly/ga-wdi-exercises/fashion-blog)
 
-## Homework: [Wendy Bite](https://github.com/ga-wdi-exercises/wendy_bite)
+## Homework: [Wendy Bite](https://git.generalassemb.ly/ga-wdi-exercises/wendy_bite)
