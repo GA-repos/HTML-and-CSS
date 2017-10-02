@@ -351,7 +351,7 @@ When we refresh the page, we should see the background color change.
 
 Note: There are three ways to write CSS into your HTML file.  
 - **Inline** (Good) ==> ```<p style="background: blue;">Inline Example</p> ```
-- **Internal** (Better) ==> <style> element in <head> of html file
+- **Internal** (Better) ==> <style> element in head of html file
 - **External** (Best!) ==> linking an external CSS file
 
 ### CSS Rules (5 minutes / 2:05)
@@ -361,11 +361,40 @@ A rule is a combination of a **selector** and a set of **declarations**.
 
 ![Anatomy of a CSS Ruleset](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
 
-## Selector (15 minutes / 2:20)
+## Selector (10 minutes / 2:20)
 
 A selector is a pattern used to match element to which the rule should apply.
 As shown this can be an element.
 Very commonly we add `class` or `id` attributes to elements mark for targeting by a specific rule.
+
+### Classes/IDs: I Do (5 min)
+
+Add the following to HTML file
+```
+<p>Paragraph 1</p>
+<p class="paragraph">Paragraph 2</p>
+<p id="p3" class="paragraph">Paragraph 3</p>
+<p id="p4" class="paragraph">Paragraph 4</p>
+```
+
+Then add this to the CSS file
+```
+p {
+  color: red;
+  font-size: 24px;
+}
+.paragraph {
+  color: purple;
+}
+#p3 {
+  color: blue;
+  font-size: 30px;
+}
+#p4 {
+  color: yellow;
+  font-size: 12px;
+}
+```
 
 Selectors can be combined and related and there are many more types of [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors).
 
@@ -374,7 +403,7 @@ Selectors can be combined and related and there are many more types of [selector
 ### Exercise: You do [CSS Diner](http://flukeout.github.io/)
 - 7 minutes working / 3 minutes review
 
-## Declaration (5 minutes / 2:25)
+## Declaration (10 minutes / 2:25)
 
 A declaration has two parts, a property and a value to which that property should be set.
 In the example above, the property is `color` and the property value is `red`.
