@@ -310,13 +310,13 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 ----------------------Note: Timing is off, need to update total times-------------
 
-## Break (5 minutes / 1:30)
+## Break (5 minutes / 1:50)
 
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **paint** or display the elements of our document.
 
-### Websites without CSS (5 minutes / 1:35)
+### Websites without CSS (5 minutes / 1:55)
 
 So far the website we've created together has no CSS and is a little plain.  Let's look at some websites and take away their CSS and see how dull and plain they become.  Note that the content will still be the same, just the *styling* will be different.  
 
@@ -361,7 +361,7 @@ A rule is a combination of a **selector** and a set of **declarations**.
 
 ![Anatomy of a CSS Ruleset](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
 
-## Selector (10 minutes / 2:20)
+## Selector (10 minutes / 2:15)
 
 A selector is a pattern used to match element to which the rule should apply.
 As shown this can be an element.
