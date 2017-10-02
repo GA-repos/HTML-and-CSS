@@ -349,6 +349,11 @@ body {
 
 When we refresh the page, we should see the background color change.
 
+Note: There are three ways to write CSS into your HTML file.  
+- **Inline** ==> ```<p style: "background: blue">Inline Example</p> ```
+- **Internal** ==> <style> element in <head> of html file
+- **External** ==> linking an external CSS file
+
 ### CSS Rules (5 minutes / 2:05)
 
 CSS styles are a series of **rules** or **rulesets**.
