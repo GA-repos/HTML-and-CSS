@@ -137,6 +137,8 @@ The `body` element contains the information actually presented to the user; it r
 
 Before we start adding content to the body lets create a file locally for our work so we can open it.
 
+*Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.*
+
 Create a directory in you sandbox called `html-and-css`
 
 ```bash
@@ -152,7 +154,7 @@ touch index.html
 atom .
 ```
 
-Go ahead and type in the boilerplate from about into your index.html file
+Go ahead and type in the *boilerplate* from about into your index.html file
 
 Add the paragraph we used as an example to the page body and give the page a title.
 
@@ -174,14 +176,6 @@ Now, `index.html` should look like this:
 </body>
 </html>
 ```
-
-Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
-
-Note: in the title we are using an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the ampersand.
-
-This is valid HTML.
-We can confirm this by copying and pasting the code into an [HTML validator](https://validator.w3.org/#validate_by_input).
-
 We can also open this file in the browser by running from the command line:
 
 ```bash
@@ -191,6 +185,11 @@ open index.html
 Wow!
 Super dull!
 We'll work on making this more lively shortly but first some practice fixing invalid HTML.
+
+This is valid HTML.
+We can confirm this by copying and pasting the code into an [HTML validator](https://validator.w3.org/#validate_by_input).
+
+*Note: in the title we are using an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the ampersand.*
 
 #### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/ga-wdi-exercises/html_fixit) (15 minutes / 1:05)
 
