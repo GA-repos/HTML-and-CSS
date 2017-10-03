@@ -247,9 +247,9 @@ There are two types of HTML lists, ordered and unordered.
 
 #### Images
 
-If there's anything people like more than lists, it's pictures.
+If there's anything people like more than lists, it's images.
 
-Pictures are **empty elements** meaning that they cannot logically have children and so are represented in HTML with a single, self-closing element.
+Images are **empty elements** meaning that they cannot logically have children and so are represented in HTML with a single, self-closing element.
 Some people put a slash at the end of empty elements but it is unnecessary.
 
 ```html
@@ -258,7 +258,7 @@ Some people put a slash at the end of empty elements but it is unnecessary.
 <img src="" alt="">
 ```
 
-Images require two attributes, a `src` with a URL for an image, and an `alt` tag for screen readers and when something breaks and the image doesn't show up.
+Images require a `src` with a URL for an image.  You should also include an `alt` tag for screen readers and when something breaks and the image doesn't show up.
 
 The url can be any address but generally we want to manage our own assets.
 
@@ -322,7 +322,7 @@ So far the website we've created together has no CSS and is a little plain.  Let
 
 - Now lets checkout [CSS Zen Garden](http://www.csszengarden.com) to see some examples of the great power and diversity that CSS can have on a website.  
 
->notice, you can use the web developer tools chrome add on to take away all css on a site
+>notice, you can use the chrome extension, 'web developer' to take away all css on a site
 
 ### CSS File: We do (5 minutes / 2:00)
 
@@ -350,8 +350,8 @@ body {
 When we refresh the page, we should see the background color change.
 
 Note: There are three ways to write CSS into your HTML file.  
-- **Inline** (Good) ==> ```<p style="background: blue;">Inline Example</p> ```
-- **Internal** (Better) ==> <style> element in head of html file
+- **Inline** (Good) ==> `<p style="background: blue;">Inline Example</p> `
+- **Internal** (Better) ==> `<style>` element in `<head>` of html file
 - **External** (Best!) ==> linking an external CSS file
 
 ### CSS Rules (5 minutes / 2:05)
