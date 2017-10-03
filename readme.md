@@ -366,18 +366,25 @@ A rule is a combination of a **selector** and a set of **declarations**.
 A selector is a pattern used to match element to which the rule should apply.
 As shown this can be an element.
 Very commonly we add `class` or `id` attributes to mark elements for targeting by a specific rule.
+
 - Periods '.' are used to select a class like this
-```
+```css
 .class-name {
   color: red;
 }
 ```
 - Hashes '#' are used to select an Id like this
-```
+```css
 #id-name {
   color: blue;
 }
 ```
+
+Note: CSS rules that are **More Specific** will override rules that are less specific.  
+- Targeting parent element ==> *Least specific*
+- Targeting element directly ==> *Less specific*
+- Targeting class ==> *More specific*
+- Targeting id ==> *Most specific*
 
 ### Classes/IDs: I Do (5 min)
 
