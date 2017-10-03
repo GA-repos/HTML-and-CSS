@@ -576,54 +576,67 @@ This diagram shows how these values relate to one another.
 We can see the box for an element on our page by right-clicking the element and clicking **inspect**.
 Then find the **Styles** window, and scroll to the bottom.
 
-We'll start with a new rule for images:
+Let's find our HTML5 logo from before and add a new rule for images:
 
 ```css
 img {
-  height: 75px;
+  height: 500px;
 }
 ```
 
-### Centering Elements: We do
+Now let's change the `padding`, `border`, `margin`, and `background-color` and **inspect** the image to see how these properties come into play.  
 
-One thing to note is that by default, images are **inline elements** meaning they only take up as much space as they need.
+```css
+img {
+  height: 500px;
+  background-color: green;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 50px;
+}
+```
 
-This is as opposed to **block level** elements which get their own line and take up as much space as is available to them.
+### Taking Up Space: Inline vs Block Elements, and how to Center Content (5 min)
 
-To see this inline behavior we can duplicate the image and we will see it repeat left to right.
+Typically, Elements are either **Inline** or **Block** Elements.  We can change this with the `display` property, and the four values we can assign it.  
+
+- An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs. Inline places all your elements on a single line.
+
+- A **block** element has some whitespace above and below it and does not tolerate any HTML elements next to it. This makes the element a block box. It won't let anything sit next to it on the page and takes up the full width.
+
+- An **inline-block** element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element. This makes the element a block box but will allow other elements to sit next to it on the same line.
+
+- If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
+
+To see this inline behavior we can create a few `div` tags to our **HTML**
 
 ```html
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+
 ```
 
-In order to center the image, we want to first make it a **block level** element by setting the `display` property to `block`
+And in our **CSS**...
 
 ```css
-img {
-  height: 75px;
-  display: block;
-}
-```
-Now go ahead and get rid of the extra images.
-
-We now want to tell the block element that it should allocate extra space evenly between its margins:
-
-```css
-img {
-  height: 75px;
-  display: block;
-  margin: 0 auto;
+div {
+  background-color: blue;
+  border: 2px solid red;
 }
 ```
 
-Much better!
+The default display property for `div` is **block**.
 
-### Border and Padding
+Let's change the display property to over to **inline**, and **inline-block** to see the difference.
+
+### Centering text vs divs
+
+- You can center text by setting the `text-align` property to `center`
+
+- In order to center a block element, you can set the `margin` property to `auto` --- You'll often also see `0 auto`
+
+## More on Border, Padding, and Margin: You do (Bonus)
 
 Let's use a margin, border, and padding to give the body a frame.
 
@@ -701,9 +714,6 @@ The generic block element used for these purposes is the `div`.
 We'll see more `div`s when we talk about using flex-box for advanced alignment.
 
 There are many many more CSS properties and nearly no limit to what CSS will let us do but these building blocks will take us a very long way. Check out the significant difference just these 25 lines (14 declarations) of CSS have made.
-
-The best place to go from here is to practice.
-The following exercises and homework will be great for this but starting with your own wireframes, then building out the HTML and then adding CSS to create something totally new will be the best practice.
 
 ## Importing Fonts: You do (Bonus)
 
