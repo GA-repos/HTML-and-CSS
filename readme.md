@@ -365,7 +365,7 @@ A rule is a combination of a **selector** and a set of **declarations**.
 
 A selector is a pattern used to match element to which the rule should apply.
 As shown this can be an element.
-Very commonly we add `class` or `id` attributes to elements mark for targeting by a specific rule.
+Very commonly we add `class` or `id` attributes to mark elements for targeting by a specific rule.
 - Periods '.' are used to select a class like this
 ```
 .class-name {
@@ -382,29 +382,28 @@ Very commonly we add `class` or `id` attributes to elements mark for targeting b
 ### Classes/IDs: I Do (5 min)
 
 Add the following to HTML file
-```
+```html
 <p>Paragraph 1</p>
 <p class="paragraph">Paragraph 2</p>
-<p id="p3" class="paragraph">Paragraph 3</p>
+<p id="p3">Paragraph 3</p>
 <p id="p4" class="paragraph">Paragraph 4</p>
 ```
 
 Then add this to the CSS file
-```
+```css
 p {
   color: red;
   font-size: 24px;
 }
 .paragraph {
   color: purple;
+  font-size: 36px;
 }
 #p3 {
   color: blue;
-  font-size: 30px;
 }
 #p4 {
   color: yellow;
-  font-size: 12px;
 }
 ```
 
