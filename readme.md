@@ -139,7 +139,7 @@ Before we start adding content to the body lets create a file locally for our wo
 
 *(Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.)*
 
-Create a directory in you sandbox called `html-and-css`
+Create a directory in your sandbox called `html-and-css`
 
 ```bash
 cd ~/wdi/sandbox
@@ -154,13 +154,13 @@ touch index.html
 atom .
 ```
 
-Go ahead and type in the *boilerplate* from about into your index.html file
+Go ahead and type in the *boilerplate* from above into your index.html file
 
 Add the paragraph we used as an example to the page body and give the page a title.
 
 Now, `index.html` should look like this:
 
-```hmtl
+```html
 <!DOCTYPE html>
 <html>
 <head>
