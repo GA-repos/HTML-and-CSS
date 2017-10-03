@@ -1,4 +1,5 @@
 # HTML & CSS
+# ----------------------Note: Timing is off, need to update total times-------------
 
 ## Learning Objectives
 - Review the roles of HTML and CSS in web pages
@@ -15,6 +16,7 @@ This lesson will be a refresher on the fundamentals of HTML and CSS.
 All material is review from the pre-work and so will move quickly and potentially glosses over material.
 For a much more robust treatment, please see [the Mozilla Developer Network Learning Area](https://developer.mozilla.org/en-US/docs/Learn).
 
+### Discussion Questions
 - What are the main 3 languages that are used to create a web page?  
 - What are their general roles in how a webpage displays information?
 
@@ -150,9 +152,7 @@ touch index.html
 atom .
 ```
 
-Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
-
-You will see the same boilerplate from above.
+Go ahead and type in the boilerplate from about into your index.html file
 
 Add the paragraph we used as an example to the page body and give the page a title.
 
@@ -174,6 +174,8 @@ Now, `index.html` should look like this:
 </body>
 </html>
 ```
+
+Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
 
 Note: in the title we are using an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the ampersand.
 
@@ -308,8 +310,6 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 - Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (facebook, google, amazon, craigslist, ebay, reddit, etc)
 - 7 minutes working / 3 minutes discussing
-
-----------------------Note: Timing is off, need to update total times-------------
 
 ## Break (5 minutes / 1:50)
 
