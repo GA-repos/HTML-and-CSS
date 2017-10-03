@@ -302,11 +302,12 @@ MDN HTML Tutorials (https://developer.mozilla.org/en-US/docs/Learn/HTML)
 MDN list of inline HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
 MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
 ```
+- [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
 
 ### Build Out Wireframe: You do (10 minutes / 1:45)
 
-- 5 minutes working / 5 minutes discussing
-- [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
+- Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (facebook, google, amazon, craigslist, ebay, reddit, etc)
+- 7 minutes working / 3 minutes discussing
 
 ----------------------Note: Timing is off, need to update total times-------------
 
