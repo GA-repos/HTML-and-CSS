@@ -280,7 +280,7 @@ We tell the browser to request an image and load it into the page by giving an i
 
 *If you would like to learn more about different kinds of HTML elements checkout [MDN's Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
 
-### Wire Framing: I do (5 minutes / 1:35)
+### Wire Framing: I do (5 minutes / 1:25)
 
 It is good practice to sketch up an approximation of what you'd like your end product to look like.
 It's alright if it's a rough approximation.
@@ -306,18 +306,18 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 ```
 - [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
 
-### Build Out Wireframe: You do (10 minutes / 1:45)
+### Build Out Wireframe: You do (10 minutes / 1:35)
 
 - Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (facebook, google, amazon, craigslist, ebay, reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
-## Break (5 minutes / 1:50)
+## Break (10 minutes / 1:45)
 
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **paint** or display the elements of our document.
 
-### Websites without CSS (5 minutes / 1:55)
+### Websites without CSS (5 minutes / 1:50)
 
 So far the website we've created together has no CSS and is a little plain.  Let's look at some websites and take away their CSS and see how dull and plain they become.  Note that the content will still be the same, just the *styling* will be different.  
 
@@ -325,7 +325,7 @@ So far the website we've created together has no CSS and is a little plain.  Let
 
 >notice, you can use the chrome extension, 'web developer' to take away all css on a site
 
-### CSS File: We do (5 minutes / 2:00)
+### CSS File: We do (5 minutes / 1:55)
 
 To get started writing styles we will create a new file.
 
@@ -355,14 +355,14 @@ Note: There are three ways to write CSS into your HTML file.
 - **Internal** (Better) ==> `<style>` element in `<head>` of html file
 - **External** (Best!) ==> linking an external CSS file
 
-### CSS Rules (5 minutes / 2:05)
+### CSS Rules (5 minutes / 2:00)
 
 CSS styles are a series of **rules** or **rulesets**.
 A rule is a combination of a **selector** and a set of **declarations**.
 
 ![Anatomy of a CSS Ruleset](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
 
-## Selector (10 minutes / 2:15)
+## Selector (10 minutes / 2:10)
 
 A selector is a pattern used to match element to which the rule should apply.
 As shown this can be an element.
@@ -387,7 +387,7 @@ Note: CSS rules that are **More Specific** will override rules that are less spe
 - Targeting class ==> *More specific*
 - Targeting id ==> *Most specific*
 
-### Classes/IDs: I Do (5 min)
+### Classes/IDs: I Do (5 min / 2:15)
 
 Add the following to HTML file
 ```html
@@ -581,7 +581,7 @@ Let's find our HTML5 logo from before and add a new rule for images:
 
 ```css
 img {
-  height: 500px;
+  height: 300px;
 }
 ```
 
@@ -589,7 +589,7 @@ Now let's change the `padding`, `border`, `margin`, and `background-color` and *
 
 ```css
 img {
-  height: 500px;
+  height: 300px;
   background-color: green;
   padding: 20px;
   border: 5px solid black;
@@ -597,7 +597,7 @@ img {
 }
 ```
 
-### Taking Up Space: Inline vs Block Elements, and how to Center Content (5 min)
+## Taking Up Space: Inline vs Block Elements, and how to Center Content (Bonus)
 
 Typically, Elements are either **Inline** or **Block** Elements.  We can change this with the `display` property, and the four values we can assign it.  
 
