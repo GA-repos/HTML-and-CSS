@@ -1,5 +1,4 @@
 # HTML & CSS
-# ----------------------Note: Timing is off, need to update total times-------------
 
 ## Learning Objectives
 - Review the roles of HTML and CSS in web pages
@@ -20,14 +19,14 @@ For a much more robust treatment, please see [the Mozilla Developer Network Lear
 - What are the main 3 languages that are used to create a web page?  
 - What are their general roles in how a webpage displays information?
 
-## HTML (Hyper Text Markup Language) (5 minutes / 0:10)
+## HTML (Hyper Text Markup Language)
 
 HTML exists to solve the problem of how a rich document can be expressed in plain text.
 That is to say what are the parts of the document, what role does each part serve (e.g. heading, image, list, emphasized text, link etc.), and how do they relate to one another.
 
 HTML expresses the **structure and semantics** of a document in plain text.
 
-### Elements: I do (10 minutes / 0:20)
+### Elements: I do (10 minutes / 0:15)
 
 ![Parts of an Element](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
 
@@ -86,7 +85,7 @@ Browsers are extremely accommodating and so will likely display something but th
 Because the browser can be uninformatively accommodating, we want to double check our work with an [HTML validator](https://validator.w3.org/).
 Even our valid example above (with the anchor tag) won't validate just yet as we are missing some required boiler plate.
 
-### HTML Boilerplate (10 minutes / 0:30)
+### HTML Boilerplate (10 minutes / 0:25)
 
 When a client's browser gets an HTML file from the server, it begins building a document that will be displayed to the user.
 
@@ -133,7 +132,7 @@ Other examples of metadata include links to external stylesheets (more later) an
 
 The `body` element contains the information actually presented to the user; it represents the content of the document.
 
-### Valid HTML in a file: We Do (20 minutes / 0:50)
+### Valid HTML in a file: We Do (15 minutes / 0:40)
 
 Before we start adding content to the body lets create a file locally for our work so we can open it.
 
@@ -191,15 +190,15 @@ We can confirm this by copying and pasting the code into an [HTML validator](htt
 
 *(Note: in the title we are using an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the ampersand.)*
 
-### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/ga-wdi-exercises/html_fixit) (15 minutes / 1:05)
+### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/ga-wdi-exercises/html_fixit) (15 minutes / :55)
 
 - 10 minutes working / 5 minutes review
 - Work with a partner and write out plain English answers
 - If you finish early, add additional HTML trying to provoke various error messages
 
-## Break (10 mins)
+## Break (10 mins / 1:05)
 
-### More Elements (15 minutes / 1:30)
+## More Elements (15 minutes / 1:20)
 
 There are tons of different HTML elements and memorizing them is impractical.
 Instead, it is better to start using the 20 percent of the building blocks that get you 80 percent of the way there.
@@ -278,6 +277,8 @@ We tell the browser to request an image and load it into the page by giving an i
 ```html
 <img src="html5logo.png" alt="html5 logo" >
 ```
+
+*If you would like to learn more about different kinds of HTML elements checkout [MDN's Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
 
 ### Wire Framing: I do (5 minutes / 1:35)
 
@@ -634,7 +635,7 @@ Let's change the display property to over to **inline**, and **inline-block** to
 
 - You can center text by setting the `text-align` property to `center`
 
-- In order to center a block element, you can set the `margin` property to `auto` --- You'll often also see `0 auto`
+- In order to center a block element, you can set the `margin` property to `auto`, or to something like `20px auto`.  This sets the left and right margins to be equal, putting the element in the center of the page.  
 
 ## More on Border, Padding, and Margin: You do (Bonus)
 
