@@ -26,7 +26,7 @@ That is to say what are the parts of the document, what role does each part serv
 
 HTML expresses the **structure and semantics** of a document in plain text.
 
-### Elements: I do (10 minutes / 0:15)
+### Elements: I do (10 minutes / 0:20)
 
 ![Parts of an Element](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
 
@@ -311,7 +311,7 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 - Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (facebook, google, amazon, craigslist, ebay, reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
-## Break (10 minutes / 1:45)
+## Break (5 minutes / 1:50)
 
 ## CSS (Cascading Style Sheets)
 
