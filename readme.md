@@ -314,13 +314,13 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 - Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (Google, Amazon, Facebook, Craigslist, Ebay, Reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
-## Break (10 minutes / 1:45)
+## Break (5 minutes / 1:40)
 
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **paint** or display the elements of our document.
 
-### Websites without CSS (5 minutes / 1:50)
+### Websites without CSS (10 minutes / 1:50)
 
 So far the website we've created together has no CSS and is a little plain.  Let's look at some websites and take away their CSS and see how dull and plain they become.  Note that the content will still be the same, just the *styling* will be different.  
 
