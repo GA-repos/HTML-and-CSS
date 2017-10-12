@@ -138,6 +138,7 @@ Before we start adding content to the body lets create a file locally for our wo
 
 *(Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.)*
 
+
 Create a directory in your sandbox called `html-and-css`
 
 ```bash
@@ -248,7 +249,9 @@ There are two types of HTML lists, ordered and unordered.
 
 If there's anything people like more than lists, it's images.
 
+
 Images are **empty elements** meaning that they cannot logically have children and so are represented in HTML with a single, self-closing element.
+
 Some people put a slash at the end of empty elements but it is unnecessary.
 
 ```html
