@@ -314,7 +314,7 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 - Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (Google, Amazon, Facebook, Craigslist, Ebay, Reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
-## Break (5 minutes / 1:50)
+## Break (10 minutes / 1:45)
 
 ## CSS (Cascading Style Sheets)
 
