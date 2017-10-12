@@ -2,8 +2,8 @@
 
 ## Learning Objectives
 - Review the roles of HTML and CSS in web pages
-- Identify the parts and roles of HTML boiler plate
 - Identify the parts of an HTML element
+- Identify the parts and roles of HTML boiler plate
 - Distinguish in-line styles, style tags, and linked style sheets
 - Break down the syntax of a CSS declaration and a CSS rule(set)
 - List commonly used properties
@@ -15,7 +15,11 @@ This lesson will be a refresher on the fundamentals of HTML and CSS.
 All material is review from the pre-work and so will move quickly and potentially glosses over material.
 For a much more robust treatment, please see [the Mozilla Developer Network Learning Area](https://developer.mozilla.org/en-US/docs/Learn).
 
-## HTML (Hyper Text Markup Language) (5 minutes / 0:10)
+### Discussion Questions
+- What are the main 3 languages that are used to create a web page?  
+- What are their general roles in how a webpage displays information?
+
+## HTML (Hyper Text Markup Language)
 
 HTML exists to solve the problem of how a rich document can be expressed in plain text.
 That is to say what are the parts of the document, what role does each part serve (e.g. heading, image, list, emphasized text, link etc.), and how do they relate to one another.
@@ -81,7 +85,7 @@ Browsers are extremely accommodating and so will likely display something but th
 Because the browser can be uninformatively accommodating, we want to double check our work with an [HTML validator](https://validator.w3.org/).
 Even our valid example above (with the anchor tag) won't validate just yet as we are missing some required boiler plate.
 
-### HTML Boilerplate (20 minutes / 0:40)
+### HTML Boilerplate (10 minutes / 0:25)
 
 When a client's browser gets an HTML file from the server, it begins building a document that will be displayed to the user.
 
@@ -128,11 +132,14 @@ Other examples of metadata include links to external stylesheets (more later) an
 
 The `body` element contains the information actually presented to the user; it represents the content of the document.
 
-### Valid HTML in a file: We Do (10 minutes / 0:50)
+### Valid HTML in a file: We Do (15 minutes / 0:40)
 
 Before we start adding content to the body lets create a file locally for our work so we can open it.
 
-Create a directory in you sandbox called `html-and-css`
+*(Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.)*
+
+
+Create a directory in your sandbox called `html-and-css`
 
 ```bash
 cd ~/wdi/sandbox
@@ -147,16 +154,13 @@ touch index.html
 atom .
 ```
 
-Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
-
-In `index.html` type `html` and hit **tab**.
-You will see the same boilerplate from above.
+Go ahead and type in the *boilerplate* from above into your index.html file
 
 Add the paragraph we used as an example to the page body and give the page a title.
 
 Now, `index.html` should look like this:
 
-```hmtl
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -172,12 +176,6 @@ Now, `index.html` should look like this:
 </body>
 </html>
 ```
-
-Note: in the title we are using an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the ampersand.
-
-This is valid HTML.
-We can confirm this by copying and pasting the code into an [HTML validator](https://validator.w3.org/#validate_by_input).
-
 We can also open this file in the browser by running from the command line:
 
 ```bash
@@ -188,15 +186,20 @@ Wow!
 Super dull!
 We'll work on making this more lively shortly but first some practice fixing invalid HTML.
 
-#### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/ga-wdi-exercises/html_fixit) (15 minutes / 1:05)
+This is valid HTML.
+We can confirm this by copying and pasting the code into an [HTML validator](https://validator.w3.org/#validate_by_input).
+
+*(Note: in the title we are using an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the ampersand.)*
+
+### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/ga-wdi-exercises/html_fixit) (15 minutes / :55)
 
 - 10 minutes working / 5 minutes review
 - Work with a partner and write out plain English answers
 - If you finish early, add additional HTML trying to provoke various error messages
 
-## Break (10 mins)
+## Break (10 mins / 1:05)
 
-### More Elements (15 minutes / 1:30)
+## More Elements (15 minutes / 1:20)
 
 There are tons of different HTML elements and memorizing them is impractical.
 Instead, it is better to start using the 20 percent of the building blocks that get you 80 percent of the way there.
@@ -244,9 +247,11 @@ There are two types of HTML lists, ordered and unordered.
 
 #### Images
 
-If there's anything people like more than lists, it's pictures.
+If there's anything people like more than lists, it's images.
 
-Pictures are **empty elements** meaning that they cannot logically have children and so are represented in HTML with a single, self-closing element.
+
+Images are **empty elements** meaning that they cannot logically have children and so are represented in HTML with a single, self-closing element.
+
 Some people put a slash at the end of empty elements but it is unnecessary.
 
 ```html
@@ -255,7 +260,7 @@ Some people put a slash at the end of empty elements but it is unnecessary.
 <img src="" alt="">
 ```
 
-Images require two attributes, a `src` with a URL for an image, and an `alt` tag for screen readers and when something breaks and the image doesn't show up.
+Images require a `src` with a URL for an image.  You should also include an `alt` tag for screen readers and when something breaks and the image doesn't show up.
 
 The url can be any address but generally we want to manage our own assets.
 
@@ -264,10 +269,10 @@ I've gone with `html5logo.png`.
 
 ![HTML5 Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png)
 
-Move the file from your Downloads folder to the `css-and-html` directory.
+Move the file from your Downloads folder to the `html-and-css` directory.
 
 ```bash
-mv ~/Downloads/html5logo.png ~/wdi/sandbox/css-and-html/
+mv ~/Downloads/html5logo.png ~/wdi/sandbox/html-and-css/
 ```
 
 We tell the browser to request an image and load it into the page by giving an image tag's source attribute a path to the image.
@@ -276,7 +281,9 @@ We tell the browser to request an image and load it into the page by giving an i
 <img src="html5logo.png" alt="html5 logo" >
 ```
 
-### Wire Framing: I do (5 minutes / 1:35)
+*If you would like to learn more about different kinds of HTML elements checkout [MDN's Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
+
+### Wire Framing: I do (5 minutes / 1:25)
 
 It is good practice to sketch up an approximation of what you'd like your end product to look like.
 It's alright if it's a rough approximation.
@@ -300,11 +307,12 @@ MDN HTML Tutorials (https://developer.mozilla.org/en-US/docs/Learn/HTML)
 MDN list of inline HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
 MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
 ```
-
-### Build Out Wireframe: You do (10 minutes / 1:45)
-
-- 5 minutes working / 5 minutes discussing
 - [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
+
+### Build Out Wireframe: You do (10 minutes / 1:35)
+
+- Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (facebook, google, amazon, craigslist, ebay, reddit, etc)
+- 7 minutes working / 3 minutes discussing
 
 ## Break (5 minutes / 1:50)
 
@@ -312,16 +320,22 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 We use CSS to tell browsers how we would like for them to **paint** or display the elements of our document.
 
-### Websites without CSS (5 minutes / 1:55)
+### Websites without CSS (5 minutes / 1:50)
 
-### CSS File: We do (5 minutes / 2:00)
+So far the website we've created together has no CSS and is a little plain.  Let's look at some websites and take away their CSS and see how dull and plain they become.  Note that the content will still be the same, just the *styling* will be different.  
+
+- Now lets checkout [CSS Zen Garden](http://www.csszengarden.com) to see some examples of the great power and diversity that CSS can have on a website.  
+
+>notice, you can use the chrome extension, 'web developer' to take away all css on a site
+
+### CSS File: We do (5 minutes / 1:55)
 
 To get started writing styles we will create a new file.
 
 ```bash
-touch ~/wdi/sandbox/css-and-html/style.css
+touch ~/wdi/sandbox/html-and-css/style.css
 ```
-> notice, this is an absolute path, if you're in the `css-and-html` directory you can just `touch style.css`
+> notice, this is an absolute path, if you're in the `html-and-css` directory you can just `touch style.css`
 
 Then we will add a line to our HTML linking the stylesheet.
 
@@ -339,18 +353,70 @@ body {
 
 When we refresh the page, we should see the background color change.
 
-### CSS Rules (5 minutes / 2:05)
+Note: There are three ways to write CSS into your HTML file.  
+- **Inline** (Good) ==> `<p style="background: blue;">Inline Example</p> `
+- **Internal** (Better) ==> `<style>` element in `<head>` of html file
+- **External** (Best!) ==> linking an external CSS file
+
+### CSS Rules (5 minutes / 2:00)
 
 CSS styles are a series of **rules** or **rulesets**.
 A rule is a combination of a **selector** and a set of **declarations**.
 
 ![Anatomy of a CSS Ruleset](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
 
-## Selector (15 minutes / 2:20)
+## Selector (10 minutes / 2:10)
 
 A selector is a pattern used to match element to which the rule should apply.
 As shown this can be an element.
-Very commonly we add `class` or `id` attributes to elements mark for targeting by a specific rule.
+Very commonly we add `class` or `id` attributes to mark elements for targeting by a specific rule.
+
+- Periods '.' are used to select a class like this
+```css
+.class-name {
+  color: red;
+}
+```
+- Hashes '#' are used to select an Id like this
+```css
+#id-name {
+  color: blue;
+}
+```
+
+Note: CSS rules that are **More Specific** will override rules that are less specific.  
+- Targeting parent element ==> *Least specific*
+- Targeting element directly ==> *Less specific*
+- Targeting class ==> *More specific*
+- Targeting id ==> *Most specific*
+
+### Classes/IDs: I Do (5 min / 2:15)
+
+Add the following to HTML file
+```html
+<p>Paragraph 1</p>
+<p class="paragraph">Paragraph 2</p>
+<p id="p3">Paragraph 3</p>
+<p id="p4" class="paragraph">Paragraph 4</p>
+```
+
+Then add this to the CSS file
+```css
+p {
+  color: red;
+  font-size: 24px;
+}
+.paragraph {
+  color: purple;
+  font-size: 36px;
+}
+#p3 {
+  color: blue;
+}
+#p4 {
+  color: yellow;
+}
+```
 
 Selectors can be combined and related and there are many more types of [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors).
 
@@ -359,7 +425,7 @@ Selectors can be combined and related and there are many more types of [selector
 ### Exercise: You do [CSS Diner](http://flukeout.github.io/)
 - 7 minutes working / 3 minutes review
 
-## Declaration (5 minutes / 2:25)
+## Declaration (10 minutes / 2:25)
 
 A declaration has two parts, a property and a value to which that property should be set.
 In the example above, the property is `color` and the property value is `red`.
@@ -514,54 +580,67 @@ This diagram shows how these values relate to one another.
 We can see the box for an element on our page by right-clicking the element and clicking **inspect**.
 Then find the **Styles** window, and scroll to the bottom.
 
-We'll start with a new rule for images:
+Let's find our HTML5 logo from before and add a new rule for images:
 
 ```css
 img {
-  height: 75px;
+  height: 300px;
 }
 ```
 
-### Centering Elements: We do
+Now let's change the `padding`, `border`, `margin`, and `background-color` and **inspect** the image to see how these properties come into play.  
 
-One thing to note is that by default, images are **inline elements** meaning they only take up as much space as they need.
+```css
+img {
+  height: 300px;
+  background-color: green;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 50px;
+}
+```
 
-This is as opposed to **block level** elements which get their own line and take up as much space as is available to them.
+## Taking Up Space: Inline vs Block Elements, and how to Center Content (Bonus)
 
-To see this inline behavior we can duplicate the image and we will see it repeat left to right.
+Typically, Elements are either **Inline** or **Block** Elements.  We can change this with the `display` property, and the four values we can assign it.  
+
+- An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs. Inline places all your elements on a single line.
+
+- A **block** element has some whitespace above and below it and does not tolerate any HTML elements next to it. This makes the element a block box. It won't let anything sit next to it on the page and takes up the full width.
+
+- An **inline-block** element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element. This makes the element a block box but will allow other elements to sit next to it on the same line.
+
+- If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
+
+To see this inline behavior we can create a few `div` tags to our **HTML**
 
 ```html
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
-<img src="html5logo.png" >
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+
 ```
 
-In order to center the image, we want to first make it a **block level** element by setting the `display` property to `block`
+And in our **CSS**...
 
 ```css
-img {
-  height: 75px;
-  display: block;
-}
-```
-Now go ahead and get rid of the extra images.
-
-We now want to tell the block element that it should allocate extra space evenly between its margins:
-
-```css
-img {
-  height: 75px;
-  display: block;
-  margin: 0 auto;
+div {
+  background-color: blue;
+  border: 2px solid red;
 }
 ```
 
-Much better!
+The default display property for `div` is **block**.
 
-### Border and Padding
+Let's change the display property to over to **inline**, and **inline-block** to see the difference.
+
+### Centering text vs divs
+
+- You can center text by setting the `text-align` property to `center`
+
+- In order to center a block element, you can set the `margin` property to `auto`, or to something like `20px auto`.  This sets the left and right margins to be equal, putting the element in the center of the page.  
+
+## More on Border, Padding, and Margin: You do (Bonus)
 
 Let's use a margin, border, and padding to give the body a frame.
 
@@ -638,10 +717,7 @@ Frequently we will want more sub-containers for visual purposes.
 The generic block element used for these purposes is the `div`.
 We'll see more `div`s when we talk about using flex-box for advanced alignment.
 
-There are many many more CSS properties and nearly no limit to what CSS will let us do but these building blocks will take us a very long way. Check out the significant difference just these 25 lines (14 declarions) of CSS have made.
-
-The best place to go from here is to practice.
-The following exercises and homework will be great for this but starting with your own wireframes, then building out the HTML and then adding CSS to create something totally new will be the best practice.
+There are many many more CSS properties and nearly no limit to what CSS will let us do but these building blocks will take us a very long way. Check out the significant difference just these 25 lines (14 declarations) of CSS have made.
 
 ## Importing Fonts: You do (Bonus)
 
