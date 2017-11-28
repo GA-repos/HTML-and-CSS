@@ -147,11 +147,11 @@ mkdir html-and-css
 cd html-and-css
 ```
 
-Create a file `index.html` and open it with atom
+Create a file `index.html` and open it with VScode
 
 ```bash
 touch index.html
-atom .
+code .
 ```
 
 Go ahead and type in the *boilerplate* from above into your index.html file
