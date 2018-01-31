@@ -651,6 +651,8 @@ The default display property for `div` is **block**.
 
 Let's change the display property over to **inline**, and **inline-block** to see the difference.
 
+Here's a [codepen example of the differences](https://codepen.io/megmaciver13/pen/zRGWyO?editors=1100#0) between block, inline, and inline-block display properties.
+
 ### Centering text vs divs
 
 - You can center text by setting the `text-align` property to `center`
