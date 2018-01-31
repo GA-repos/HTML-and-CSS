@@ -12,7 +12,7 @@
 ## Overview (5 minutes / 0:05)
 
 This lesson will be a refresher on the fundamentals of HTML and CSS.
-All material is review from the pre-work and so will move quickly and potentially glosses over material.
+All material is review from the pre-work, so we will move quickly and potentially glosses over material.
 For a much more robust treatment, please see [the Mozilla Developer Network Learning Area](https://developer.mozilla.org/en-US/docs/Learn).
 
 ### Discussion Questions
@@ -96,16 +96,13 @@ Consider the following HTML boilerplate
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>This is the title</title>
   </head>
   <body>
 
   </body>
 </html>
 ```
-
-This is very nearly valid HTML.
-The only missing requirement is content in the `title` tag.
 
 The first line `<!DOCTYPE html>` declares that the document is an HTML document.
 This is largely vestigial but necessary and not worth worrying about at the moment beyond knowing it is necessary.
@@ -120,13 +117,24 @@ Both `head` and `body` are required and they are the only two valid children of 
 #### Head
 
 The `head` element holds **metadata** about the document; metadata meaning extra information about the document beyond the content of the document.
+
 One required piece of metadata is the `title` element.
 Every page is required to have a title; without one the HTML document is invalid.
+The `title` element defines what shows up in the browser window, what the page is called when added to favorites/bookmarks, and what the page is titled in search-engine results.
 
 The `meta` element declares that the *charset* or set of characters used in this document is **utf-8** which includes most characters from all known human languages.
 This is not required but can avoid some problems you might run into if you use special characters.
 
+Two other meta tags that may autofill into HTML5 boilerplate:
+
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">` 
+	- This sets the width of the area in which the content renders (the viewport) to the width of the device and sets the scale to 1. You can read more about this [here](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW26).
+- `<meta http-equiv="X-UA-Compatible" content="ie=edge">`
+	- This is for Internet Explorer to ensure that it uses the highest mode of IE available. You can read more about this [here](https://msdn.microsoft.com/en-us/library/ff955275(v=vs.85).aspx).
+
 Other examples of metadata include links to external stylesheets (more later) and scripts to run on the page.
+
+**Additional resources on [the head](https://gethead.info/)**
 
 #### Body
 
@@ -147,16 +155,14 @@ mkdir html-and-css
 cd html-and-css
 ```
 
-Create a file `index.html` and open it with VScode
+Create a file `index.html` and open it with VS Code
 
 ```bash
 touch index.html
 code .
 ```
 
-Go ahead and type in the *boilerplate* from above into your index.html file
-
-Add the paragraph we used as an example to the page body and give the page a title.
+Go ahead and type the boilerplate into your index.html file. Then, add p element to the page body and put a title into the head. (You can use the p element and title example from above.)
 
 Now, `index.html` should look like this:
 
@@ -250,7 +256,8 @@ There are two types of HTML lists, ordered and unordered.
 If there's anything people like more than lists, it's images.
 
 
-Images are **empty elements** meaning that they cannot logically have children and so are represented in HTML with a single, self-closing element.
+Images are **empty elements** meaning that they cannot logically have children.
+They are represented in HTML with a single, self-closing element.
 
 Some people put a slash at the end of empty elements but it is unnecessary.
 
@@ -260,11 +267,11 @@ Some people put a slash at the end of empty elements but it is unnecessary.
 <img src="" alt="">
 ```
 
-Images require a `src` with a URL for an image.  You should also include an `alt` tag for screen readers and when something breaks and the image doesn't show up.
+Images require a `src` with a URL for an image.  You should also include an `alt` tag for screen readers, and when something breaks and the image doesn't show up.
 
 The url can be any address but generally we want to manage our own assets.
 
-Right click the picture and click **Save image as...**, give the file a shorter name, and make sure you save it to Downloads.
+Right click the picture and click **"Save image as..."**, give the file a shorter name, and make sure you save it to Downloads.
 I've gone with `html5logo.png`.
 
 ![HTML5 Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png)
@@ -291,6 +298,8 @@ It's alright if it's a rough approximation.
 ![Rough Wireframe](https://files.slack.com/files-pri/T2D6FU4JY-F60F2QWC9/image_uploaded_from_ios.jpg?pub_secret=41dba35dd8)
 ...very rough approximation.
 
+Wireframing is a helpful tool for you to plan out and visualize the layout and hierarchy of your content before you start coding.
+
 The text and links:
 
 ```
@@ -311,18 +320,20 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 ### Build Out Wireframe: You do (10 minutes / 1:35)
 
-- Pick a space on the wall and with a partner draw out a rough wireframe of a homepage of a well known site (Google, Amazon, Facebook, Craigslist, Ebay, Reddit, etc)
+- Pick a space on the wall and with a group draw out a rough wireframe of a homepage of a well known site (Google, Amazon, Facebook, Craigslist, Ebay, Reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
 ## Break (5 minutes / 1:40)
 
 ## CSS (Cascading Style Sheets)
 
-We use CSS to tell browsers how we would like for them to **paint** or display the elements of our document.
+We use CSS to tell browsers how we would like for them to **display** the elements of our document.
 
 ### Websites without CSS (10 minutes / 1:50)
 
-So far the website we've created together has no CSS and is a little plain.  Let's look at some websites and take away their CSS and see how dull and plain they become.  Note that the content will still be the same, just the *styling* will be different.  
+So far the website we've created together has no CSS and is a little plain.
+
+Let's look at some websites and take away their CSS and see how dull and plain they become.  Note that the content will still be the same, just the *styling* will be different.  
 
 - Now lets checkout [CSS Zen Garden](http://www.csszengarden.com) to see some examples of the great power and diversity that CSS can have on a website.  
 
@@ -335,7 +346,7 @@ To get started writing styles we will create a new file.
 ```bash
 touch ~/wdi/sandbox/html-and-css/style.css
 ```
-> notice, this is an absolute path, if you're in the `html-and-css` directory you can just `touch style.css`
+> Notice: this is an absolute path. If you're in the `html-and-css` directory you can just `touch style.css`
 
 Then we will add a line to our HTML linking the stylesheet.
 
@@ -367,9 +378,9 @@ A rule is a combination of a **selector** and a set of **declarations**.
 
 ## Selector (10 minutes / 2:10)
 
-A selector is a pattern used to match element to which the rule should apply.
-As shown this can be an element.
-Very commonly we add `class` or `id` attributes to mark elements for targeting by a specific rule.
+A selector is a pattern used to match HTML elements to the rule that should apply.
+As shown, a selector can be an element.
+Or, very commonly, we add `class` or `id` attributes to mark elements for targeting by a specific rule.
 
 - Periods '.' are used to select a class like this
 ```css
@@ -377,7 +388,7 @@ Very commonly we add `class` or `id` attributes to mark elements for targeting b
   color: red;
 }
 ```
-- Hashes '#' are used to select an Id like this
+- Hashes '#' are used to select an id like this
 ```css
 #id-name {
   color: blue;
@@ -392,7 +403,8 @@ Note: CSS rules that are **More Specific** will override rules that are less spe
 
 ### Classes/IDs: I Do (5 min / 2:15)
 
-Add the following to HTML file
+Add the following to HTML file:
+
 ```html
 <p>Paragraph 1</p>
 <p class="paragraph">Paragraph 2</p>
@@ -400,7 +412,8 @@ Add the following to HTML file
 <p id="p4" class="paragraph">Paragraph 4</p>
 ```
 
-Then add this to the CSS file
+Then add this to the CSS file:
+
 ```css
 p {
   color: red;
@@ -420,15 +433,16 @@ p {
 
 Selectors can be combined and related and there are many more types of [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors).
 
-**Bonus** Especially interesting are [pseudo class selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements).
+**Bonus**: Especially interesting are [pseudo class selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements).
 
-### Exercise: You do [CSS Diner](http://flukeout.github.io/)
+### Exercise: You do [CSS Diner](http://flukeout.github.io/) (10 min / 2:20)
 - 7 minutes working / 3 minutes review
 
-## Declaration (10 minutes / 2:25)
+## Declaration (10 minutes / 2:30)
 
 A declaration has two parts, a property and a value to which that property should be set.
 In the example above, the property is `color` and the property value is `red`.
+
 There must be a colon separating each property from its property value and a semicolon at the end of the declaration.
 By adding just that rule to our CSS and refreshing the page in the browser, we can see the effect of the rule (though you have to scroll past the massive image -- we'll fix that shortly).
 
@@ -437,6 +451,7 @@ By adding just that rule to our CSS and refreshing the page in the browser, we c
 Like HTML elements, there are tons of css properties and it is impractical to memorize them.
 Again we're looking for the 20% that gets us 80% of the way.
 
+Here are some good ones to know:
 
 #### [Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 
@@ -475,14 +490,16 @@ body {
 
 ##### [Font Family](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Font_families)
 
-An less subtle change we can easily make is to use a font other than the default `Times`.
+A less subtle change we can easily make is to use a font other than the default `Times`.
 
-See below for details on brining in custom fonts from Google Fonts.
-For now we'll just use some of the **web safe fonts** which are available by default in most every browser. The web safe fonts are:
+See below for details on bringing in custom fonts from Google Fonts.
+For now we'll just use some of the **web safe fonts** which are available by default in almost every browser. Some web safe fonts are:
 
 - Arial (sans-serif)
 - Courier New (monospace)
+- Courier (monospace)
 - Georgia (serif)
+- Palatino (serif)
 - Times New Roman (serif)
 - Trebuchet MS (sans-serif)
 - Verdana (sans-serif)
@@ -600,9 +617,9 @@ img {
 }
 ```
 
-## Taking Up Space: Inline vs Block Elements, and how to Center Content (Bonus)
+## Taking Up Space: Inline vs Block Elements, and How to Center Content (Bonus)
 
-Typically, Elements are either **Inline** or **Block** Elements.  We can change this with the `display` property, and the four values we can assign it.  
+Typically, elements are either **inline** or **block** elements.  We can change this with the `display` property, and the four values we can assign it.  
 
 - An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs. Inline places all your elements on a single line.
 
@@ -632,7 +649,7 @@ div {
 
 The default display property for `div` is **block**.
 
-Let's change the display property to over to **inline**, and **inline-block** to see the difference.
+Let's change the display property over to **inline**, and **inline-block** to see the difference.
 
 ### Centering text vs divs
 
@@ -680,9 +697,7 @@ body {
 ```
 
 Checking out the result in the browser, the border is a bit heavy and the color is a bit odd.
-Let's use the Dev Tools to tweak this until it looks right.
-
-We then update the value of the border property with the one we settled on:
+Let's update the value of the border property:
 
 ```css
 body {
@@ -717,7 +732,7 @@ Frequently we will want more sub-containers for visual purposes.
 The generic block element used for these purposes is the `div`.
 We'll see more `div`s when we talk about using flex-box for advanced alignment.
 
-There are many many more CSS properties and nearly no limit to what CSS will let us do but these building blocks will take us a very long way. Check out the significant difference just these 25 lines (14 declarations) of CSS have made.
+There are many many more CSS properties and nearly no limit to what CSS will let us do but these building blocks will take us a very long way. Check out the significant difference just this bit of CSS has made.
 
 ## Importing Fonts: You do (Bonus)
 
@@ -730,8 +745,14 @@ To add a font:
 4. Add the provided link element (something like `<link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">`) to the head of your HTML.
 5. Add the provided declaration (something like `font-family: 'Fresca', sans-serif;`) to a CSS rule targeting the elements to which you would like to apply the font.
 
-## [Hippie Portfolio](https://git.generalassemb.ly/ga-wdi-exercises/hippy-portfolio)
+## Closing
 
-## Exercise: [Fashion Blog](https://git.generalassemb.ly/ga-wdi-exercises/fashion-blog)
+There's a lot you can do with CSS! Don't underestimate it as just "colors and spacing" - there are a lot of interesting and engaging CSS tricks that can greatly improve the appearance of your webpage. In your next lecture, you'll learn more about layout in CSS. 
+
+>To see an example of the power of CSS, check out this animation: [Kylo Ren CSS](https://tympanus.net/codrops/2017/10/31/star-wars-kylo-ren-x-pure-css-animation/)
+
+## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/ga-wdi-exercises/fashion-blog)
+
+## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/ga-wdi-exercises/hippy-portfolio)
 
 ## Homework: [Wendy Bite](https://git.generalassemb.ly/ga-wdi-exercises/wendy_bite)
