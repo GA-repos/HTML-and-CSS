@@ -32,7 +32,7 @@ do they relate to one another.
 
 HTML expresses the **structure and semantics** of a document in plain text.
 
-### Elements: I do (10 minutes / 0:20)
+### Elements: I do (10 minutes / 0:15)
 
 ![Parts of an
 Element](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
@@ -91,11 +91,12 @@ exception of **empty elements** which we'll discuss momentarily).
 <p>The easiest way to learn HTML <em>is to use it!</em>
 ```
 
-Browsers are extremely accommodating and so will likely display something but
-this behavior can't and shouldn't be depended upon.
+Browsers are fairly smart and will guess what you meant - but don't rely on that or you'll have a bad time.
+
+Also, if it guesses wrong it won't tell you! And you'll get really mad at your computer. Bad times.
 
 Because the browser can be uninformatively accommodating, we want to double
-check our work with an [HTML validator](https://validator.w3.org/). Even our
+check our work with an [HTML validator](https://validator.w3.org/nu/#textarea). Even our
 valid example above (with the anchor tag) won't validate just yet as we are
 missing some required boiler plate.
 
@@ -155,12 +156,12 @@ Two other meta tags that may autofill into HTML5 boilerplate:
 - `<meta http-equiv="X-UA-Compatible" content="ie=edge">`
   - This is for Internet Explorer to ensure that it uses the highest mode of IE
     available. You can read more about this
-    [here](https://msdn.microsoft.com/en-us/library/ff955275(v=vs.85).aspx).
+    [here](https://msdn.microsoft.com/en-us/library/ff955275?v=vs.85.aspx).
 
 Other examples of metadata include links to external stylesheets (more later)
 and scripts to run on the page.
 
-**Additional resources on [the head](https://gethead.info/)**
+> There are MANY options for the meta tag. So many that there's probably not an exhaustive list anywhere.
 
 #### Body
 
@@ -175,7 +176,6 @@ work so we can open it.
 *(Note: All code for this lesson is available in [this
 repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with
 branches for each step.)*
-
 
 Create a directory in your sandbox called `html-and-css`
 
@@ -220,11 +220,16 @@ We can also open this file in the browser by running from the command line:
 open index.html
 ```
 
+Or for linux machines:
+```bash
+google-chrome index.html
+```
+
 Wow! Super dull! We'll work on making this more lively shortly but first some
 practice fixing invalid HTML.
 
 This is valid HTML. We can confirm this by copying and pasting the code into an
-[HTML validator](https://validator.w3.org/#validate_by_input).
+[HTML validator](https://validator.w3.org/nu/#textarea).
 
 *(Note: in the title we are using an [HTML
 entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the
@@ -327,23 +332,36 @@ image tag's source attribute a path to the image.
 <img src="html5logo.png" alt="html5 logo" >
 ```
 
-*If you would like to learn more about different kinds of HTML elements checkout
-[MDN's Element
-Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
+### Semantic HTML
 
-## Wire Framing: I do (5 minutes / 1:25)
+Besides the basic elements, there are some "new" semantic HTML elements that will make your life easier if you learn to use them.
 
-It is good practice to sketch up an approximation of what you'd like your end
-product to look like. It's alright if it's a rough approximation.
+[MDN's Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
 
-![Rough
-Wireframe](https://files.slack.com/files-pri/T2D6FU4JY-F60F2QWC9/image_uploaded_from_ios.jpg?pub_secret=41dba35dd8)
-...very rough approximation.
+These include elements like:
+```html
+<section>
+<content>
+<header>
+<footer>
+<nav>
+<main>
 
-Wireframing is a helpful tool for you to plan out and visualize the layout and
-hierarchy of your content before you start coding.
+```
 
-The text and links:
+### Why so many elements?
+
+All of these elements have pre-defined default behavior or styling that the browser will interpret and style for you. You can see some examples of default styles by using the browser styles inspector.
+
+![chrome elements](./images/chrome-inspector-styles.png)
+
+They can all be modified using CSS to look or function in a completely different way. But don't do that! They're here to provide you a sane baseline.
+
+The real reason to use different elements is FOR YOUR OWN SAKE!
+
+Code written in this way is called **semantic HTML**. It makes it easier (for you and everyone else) to read and debug your html. It's way better than trying to debug a sea of nested `<div>` elements.
+
+#### Resources:
 
 ```
 Good Strategies
@@ -362,6 +380,19 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 - [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
 
+## Wire Framing: I do (5 minutes / 1:25)
+
+It is good practice to sketch up an approximation of what you'd like your end
+product to look like. It's alright if it's a rough approximation.
+
+![Rough
+Wireframe](https://files.slack.com/files-pri/T2D6FU4JY-F60F2QWC9/image_uploaded_from_ios.jpg?pub_secret=41dba35dd8)
+...very rough approximation.
+
+Wireframing is a helpful tool for you to plan out and visualize the layout and
+hierarchy of your content before you start coding.
+
+
 ### Build Out Wireframe: You do (10 minutes / 1:35)
 
 - Pick a space on the wall and with a group draw out a rough wireframe of a
@@ -369,14 +400,14 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
   Reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
-## Break (5 minutes / 1:40)
+## Break (10 minutes / 1:50)
 
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **display** the
 elements of our document.
 
-### Websites without CSS (10 minutes / 1:50)
+### Websites without CSS (10 minutes / 2:00)
 
 So far the website we've created together has no CSS and is a little plain.
 
@@ -387,8 +418,7 @@ will be different.
 - Now lets checkout [CSS Zen Garden](http://www.csszengarden.com) to see some
   examples of the great power and diversity that CSS can have on a website.  
 
->notice, you can use the chrome extension, 'web developer' to take away all css
->on a site
+> Optional: You can use the chrome extension called [web developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en-US) to disable css on any site. If you want to.
 
 ### CSS File: We do (5 minutes / 1:55)
 
@@ -461,6 +491,8 @@ specific.
 - Targeting class ==> *More specific*
 - Targeting id ==> *Most specific*
 
+CSS can also overwrite itself. For example, if you have two rules that have the same precedence (like two classes), the one that appears further down in the file will overwrite the previous one.
+
 ### Classes/IDs: I Do (5 min / 2:15)
 
 Add the following to HTML file:
@@ -497,22 +529,22 @@ Selectors can be combined and related and there are many more types of
 **Bonus**: Especially interesting are [pseudo class
 selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements).
 
-### Exercise: You do [CSS Diner](http://flukeout.github.io/) (10 min / 2:20)
+### Exercise: You do [CSS Diner](http://flukeout.github.io/) (20 min / 2:20)
 
-- 7 minutes working / 3 minutes review
+- 15 minutes working / 5 minutes review
 
-## Declaration (10 minutes / 2:30)
+### Declaration (10 minutes / 2:30)
 
 A declaration has two parts, a property and a value to which that property
-should be set. In the example above, the property is `color` and the property
-value is `red`.
+should be set. In the example above, the property is `color` and the property value is `red`.
 
 There must be a colon separating each property from its property value and a
 semicolon at the end of the declaration. By adding just that rule to our CSS and
-refreshing the page in the browser, we can see the effect of the rule (though
-you have to scroll past the massive image -- we'll fix that shortly).
+refreshing the page in the browser, we can see the effect of the rule.
 
-### Properties
+## Break (10 minutes / 2:40)
+
+### Properties (20 minutes / 3:00)
 
 Like HTML elements, there are tons of css properties and it is impractical to
 memorize them. Again we're looking for the 20% that gets us 80% of the way.
@@ -542,7 +574,7 @@ Textures](https://www.transparenttextures.com/)
 
 #### [Text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 
-##### [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+#### [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
 The color property sets the color of text. An easy improvement to the default
 styling is to set the text color to something just off black. For off black, we
@@ -557,7 +589,7 @@ body {
 }
 ```
 
-##### [Font Family](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Font_families)
+#### [Font Family](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Font_families)
 
 A less subtle change we can easily make is to use a font other than the default
 `Times`.
@@ -602,7 +634,7 @@ h1 {
 }
 ```
 
-##### [Font size](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Font_size)
+#### [Font size](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Font_size)
 
 A very common mistake is to use a header with a larger number (e.g. `h4`) for
 the smaller font. This is bad practice. Instead we want to use the heading with
@@ -624,9 +656,9 @@ like text decorations and shadows!
 For more detail on units of measurement in CSS check out [this Values and Units
 guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units).
 
-##### Text Layout
+#### Text Layout
 
-###### [Text Alignment](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_alignment)
+##### [Text Alignment](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_alignment)
 
 Next we'll center our heading by adding a declaration setting the `text-align`
 value:
@@ -642,7 +674,7 @@ h1 {
 Keep in mind the text-align property will only work on text. We will cover
 layout of other elements below in the discussion of the box model.
 
-##### [Line Height](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Line_height)
+#### [Line Height](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Line_height)
 
 The line height property sets the size of each line. The property value accepts
 any unit but is frequently seen without a unit meaning relative to the size of
@@ -671,7 +703,7 @@ properties can be used to adjust space around text.
 Next we want to fix the obnoxiously large image but first we should review how
 elements relate to space with the **box model**.
 
-## Box Model: I do (5 minutes / 2:30)
+## Box Model: I do (10 minutes / 3:10)
 
 The browser represents HTML elements on the page as blocks. Every block on the
 page has `width`, `height`, `padding`, `margin`, and `border` properties. This
@@ -704,7 +736,7 @@ img {
 }
 ```
 
-## Taking Up Space: Inline vs Block Elements, and How to Center Content (Bonus)
+## Taking Up Space: Inline vs Block Elements, and How to Center Content (10 minutes / 3:20)
 
 Typically, elements are either **inline** or **block** elements.  We can change
 this with the `display` property, and the four values we can assign it.  
@@ -737,6 +769,7 @@ And in our **CSS**...
 div {
   background-color: blue;
   border: 2px solid red;
+  height: 30px;
 }
 ```
 
@@ -746,7 +779,7 @@ Let's change the display property over to **inline**, and **inline-block** to
 see the difference.
 
 Here's a [codepen example of the
-differences](https://codepen.io/megmaciver13/pen/zRGWyO?editors=1100#0) between
+differences](https://codepen.io/jabyess/pen/NMLYBG) between
 block, inline, and inline-block display properties.
 
 ### Centering text vs divs
@@ -867,6 +900,10 @@ learn more about layout in CSS.
 
 >To see an example of the power of CSS, check out this animation: [Kylo Ren
 >CSS](https://tympanus.net/codrops/2017/10/31/star-wars-kylo-ren-x-pure-css-animation/)
+
+> or this awesome set of drawings made using [A SINGLE DIV](https://a.singlediv.com/) and a bunch of CSS
+
+> or this crazy complex [pure css art](https://github.com/cyanharlow/purecss-francine)
 
 ## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/dc-wdi-fundamentals/fashion-blog)
 
