@@ -185,7 +185,7 @@ mkdir html-and-css
 cd html-and-css
 ```
 
-Create a file `index.html` and open it with VS Code
+Create a file `index.html` and open it with Sublime
 
 ```bash
 touch index.html
@@ -322,7 +322,7 @@ Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_w
 Move the file from your Downloads folder to the `html-and-css` directory.
 
 ```bash
-mv ~/Downloads/html5logo.png ~/wdi/sandbox/html-and-css/
+mv ~/Downloads/html5logo.png ~/sei/sandbox/html-and-css/
 ```
 
 We tell the browser to request an image and load it into the page by giving an
