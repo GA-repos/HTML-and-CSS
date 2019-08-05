@@ -751,7 +751,7 @@ this with the `display` property, and the four values we can assign it.
   tolerate any HTML elements next to it. This makes the element a block box. It
   won't let anything sit next to it on the page and takes up the full width. This is what most of the elements on a webpage are.
 
-============
+----
 
 ![inline](./images/inline.png)
 
@@ -760,7 +760,7 @@ this with the `display` property, and the four values we can assign it.
   like a block. It only takes up as much width as it needs. Inline places all
   your elements on a single line. Padding / margins only work left + right, not top and bottom. Top and bottom spacing is controlled by line-height property because the content is inline.
 
-============
+----
 
 ![inline-block](./images/inline-block.png)
 
@@ -769,7 +769,7 @@ this with the `display` property, and the four values we can assign it.
   element a block box but will allow other elements to sit next to it on the
   same line. You can move these with the text-align property, which is weird but useful.
 
-============
+----
 
 - If you assign **none** as the value of the display, this will make the element
   and its content disappear from the page entirely!
