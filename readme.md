@@ -32,6 +32,8 @@ do they relate to one another.
 
 HTML expresses the **structure and semantics** of a document in plain text.
 
+[Reference to help you with HTML](./reference/html-tags.pdf)
+
 ### Elements: I do (10 minutes / 0:15)
 
 ![Parts of an
@@ -348,6 +350,8 @@ These include elements like:
 <main>
 
 ```
+
+[Reference to help you with semantic HTML](./reference/h5d-sectioning-flowchart.pdf)
 
 ### Why so many elements?
 
@@ -741,17 +745,32 @@ img {
 Typically, elements are either **inline** or **block** elements.  We can change
 this with the `display` property, and the four values we can assign it.  
 
+![block](./images/block.png)
+
+- A **block** element has some whitespace above and below it and does not
+  tolerate any HTML elements next to it. This makes the element a block box. It
+  won't let anything sit next to it on the page and takes up the full width. This is what most of the elements on a webpage are.
+
+----
+
+![inline](./images/inline.png)
+
 - An **inline** element has no line break before or after it. This makes the
   element sit on the same line as another element, but without formatting it
   like a block. It only takes up as much width as it needs. Inline places all
-  your elements on a single line.
-- A **block** element has some whitespace above and below it and does not
-  tolerate any HTML elements next to it. This makes the element a block box. It
-  won't let anything sit next to it on the page and takes up the full width.
+  your elements on a single line. Padding / margins only work left + right, not top and bottom. Top and bottom spacing is controlled by line-height property because the content is inline.
+
+----
+
+![inline-block](./images/inline-block.png)
+
 - An **inline-block** element is placed as an inline element (on the same line
   as adjacent content), but it behaves as a block element. This makes the
   element a block box but will allow other elements to sit next to it on the
-  same line.
+  same line. You can move these with the text-align property, which is weird but useful.
+
+----
+
 - If you assign **none** as the value of the display, this will make the element
   and its content disappear from the page entirely!
 
