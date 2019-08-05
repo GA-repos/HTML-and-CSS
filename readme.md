@@ -32,7 +32,7 @@ do they relate to one another.
 
 HTML expresses the **structure and semantics** of a document in plain text.
 
-![Reference to help you with HTML](./reference/html-tags.pdf)
+[Reference to help you with HTML](./reference/html-tags.pdf)
 
 ### Elements: I do (10 minutes / 0:15)
 
@@ -351,7 +351,7 @@ These include elements like:
 
 ```
 
-![Reference to help you with semantic HTML](./reference/h5d-sectioning-flowchart.pdf)
+[Reference to help you with semantic HTML](./reference/h5d-sectioning-flowchart.pdf)
 
 ### Why so many elements?
 
