@@ -237,7 +237,7 @@ This is valid HTML. We can confirm this by copying and pasting the code into an
 entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the
 ampersand.)*
 
-### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/dc-wdi-fundamentals/html-fix-it) (15 minutes / :55)
+### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/seir-1118/html-fix-it) (15 minutes / :55)
 
 - 10 minutes working / 5 minutes review
 - Work with a partner and write out plain English answers
