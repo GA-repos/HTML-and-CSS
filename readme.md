@@ -399,8 +399,8 @@ hierarchy of your content before you start coding.
 
 ### Build Out Wireframe: You do (10 minutes / 1:35)
 
-- Pick a space on the wall and with a group draw out a rough wireframe of a
-  homepage of a well known site (Google, Amazon, Facebook, Craigslist, Ebay,
+- Pick a space on the wall if one is available or use Google Draw and with a group draw out a rough wireframe of a
+  homepage of a well known site (Amazon, Facebook, Craigslist, Ebay,
   Reddit, etc)
 - 7 minutes working / 3 minutes discussing
 
@@ -924,8 +924,8 @@ learn more about layout in CSS.
 
 > or this crazy complex [pure css art](https://github.com/cyanharlow/purecss-francine)
 
-## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/dc-wdi-fundamentals/fashion-blog)
+## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/seir-1118/fashion-blog)
 
-## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/dc-wdi-fundamentals/hippy-portfolio)
+## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/seir-1118/hippy-portfolio)
 
-## Homework: [Wendy Bite](https://git.generalassemb.ly/dc-wdi-fundamentals/wendy-bite)
+## Homework: [Wendy Bite](https://git.generalassemb.ly/seir-1118/wendy-bite)
