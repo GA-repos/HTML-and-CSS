@@ -182,7 +182,7 @@ branches for each step.)*
 Create a directory in your sandbox called `html-and-css`
 
 ```bash
-cd ~/wdi/sandbox
+cd ~/sei/sandbox
 mkdir html-and-css
 cd html-and-css
 ```
@@ -429,7 +429,7 @@ will be different.
 To get started writing styles we will create a new file.
 
 ```bash
-touch ~/wdi/sandbox/html-and-css/style.css
+touch ~/sei/sandbox/html-and-css/style.css
 ```
 > Notice: this is an absolute path. If you're in the `html-and-css` directory
 > you can just `touch style.css`
