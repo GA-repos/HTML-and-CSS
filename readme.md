@@ -919,5 +919,3 @@ learn more about layout in CSS.
 ## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/seir-1118/fashion-blog)
 
 ## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/seir-1118/hippy-portfolio)
-
-## Homework: [Wendy Bite](https://git.generalassemb.ly/seir-1118/wendy-bite)
