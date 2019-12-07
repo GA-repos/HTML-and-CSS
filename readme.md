@@ -396,14 +396,6 @@ Wireframe](https://files.slack.com/files-pri/T2D6FU4JY-F60F2QWC9/image_uploaded_
 Wireframing is a helpful tool for you to plan out and visualize the layout and
 hierarchy of your content before you start coding.
 
-
-### Build Out Wireframe: You do (10 minutes / 1:35)
-
-- Pick a space on the wall if one is available or use Google Draw and with a group draw out a rough wireframe of a
-  homepage of a well known site (Amazon, Facebook, Craigslist, Ebay,
-  Reddit, etc)
-- 7 minutes working / 3 minutes discussing
-
 ## Break (10 minutes / 1:50)
 
 ## CSS (Cascading Style Sheets)
