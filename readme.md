@@ -916,6 +916,6 @@ learn more about layout in CSS.
 
 > or this crazy complex [pure css art](https://github.com/cyanharlow/purecss-francine)
 
-## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/seir-1118/fashion-blog)
+## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/seir-129/fashion-blog)
 
-## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/seir-1118/hippy-portfolio)
+## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/seir-129/hippy-portfolio)
