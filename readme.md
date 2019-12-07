@@ -187,7 +187,7 @@ mkdir html-and-css
 cd html-and-css
 ```
 
-Create a file `index.html` and open it with Sublime
+Create a file `index.html` and open it with Visual Studio Code
 
 ```bash
 touch index.html
