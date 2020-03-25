@@ -5,12 +5,11 @@
 - Review the roles of HTML and CSS in web pages
 - Identify the parts of an HTML element
 - Identify the parts and roles of HTML boiler plate
-- Distinguish in-line styles, style tags, and linked style sheets
 - Break down the syntax of a CSS declaration and a CSS rule(set)
 - List commonly used properties
 - Distinguish the components of the box model
 
-## Overview (5 minutes / 0:05)
+## Overview
 
 This lesson will be a refresher on the fundamentals of HTML and CSS. All
 material is review from the pre-work, so we will move quickly and potentially
@@ -20,7 +19,7 @@ Area](https://developer.mozilla.org/en-US/docs/Learn).
 
 ### Discussion Questions
 
-- What are the main 3 languages that are used to create a web page?  
+- What are the only 3 languages that browsers can understand?  
 - What are their general roles in how a webpage displays information?
 
 ## HTML (Hyper Text Markup Language)
@@ -34,7 +33,7 @@ HTML expresses the **structure and semantics** of a document in plain text.
 
 [Reference to help you with HTML](./reference/html-tags.pdf)
 
-### Elements: I do (10 minutes / 0:15)
+### Elements: I do 
 
 ![Parts of an
 Element](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
@@ -45,7 +44,7 @@ The parts of an HTML document are called **elements** and they are denoted with
 ![Attributes](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
 
 Extra information about elements can be added using **attributes** which are
-added to the opening tag. A ubiquitous element which always needs an attribute
+added to the _opening tag_. A ubiquitous element which always needs an attribute
 is the `a` (for *anchor*) element. The `a` element creates a link to another
 location, frequently another page.
 
@@ -86,28 +85,23 @@ tags) but can never straddle another element.
 ```
 
 Similarly, do not omit closing tags. Every element needs a closing tag (with the
-exception of **empty elements** which we'll discuss momentarily).
+exception of **empty elements**).
 
 ```html
 <!-- Also, don't do this! -->
 <p>The easiest way to learn HTML <em>is to use it!</em>
 ```
 
-Browsers are fairly smart and will guess what you meant - but don't rely on that or you'll have a bad time.
-
-Also, if it guesses wrong it won't tell you! And you'll get really mad at your computer. Bad times.
-
-Because the browser can be uninformatively accommodating, we want to double
-check our work with an [HTML validator](https://validator.w3.org/nu/#textarea). Even our
+Browsers try to correct our mistakes, and this is often unhelpful because they don't provide us with informative errors. [HTML validators](https://validator.w3.org/nu/#textarea) and our linter can help us out though. Even our
 valid example above (with the anchor tag) won't validate just yet as we are
 missing some required boiler plate.
 
-### HTML Boilerplate (10 minutes / 0:25)
+### HTML Boilerplate
 
 When a client's browser gets an HTML file from the server, it begins building a
 document that will be displayed to the user.
 
-Consider the following HTML boilerplate
+The following HTML boilerplate tells the browser how to construct the page:
 
 ```html
 <!DOCTYPE html>
@@ -122,15 +116,12 @@ Consider the following HTML boilerplate
 </html>
 ```
 
-The first line `<!DOCTYPE html>` declares that the document is an HTML document.
-This is largely vestigial but necessary and not worth worrying about at the
-moment beyond knowing it is necessary.
+The first line `<!DOCTYPE html>` declares that the document is an HTML document and specifically, this doctype declaration tells the browser that the page should be interpreted using the HTML5 specification.
 
-The next line opens the top level element, `html` which represents the entire
-document. This is the only top level element and spans the whole document. The
-closing `html` tag should be the last line of the page.
+Every webpage is enclosed in `html` tag defining the start and end of the
+document. The closing `html` tag should always be the last line of the page.
 
-The `html` element has two children, `head` and `body`. Both `head` and `body`
+The `html` element has **two children**, `head` and `body`. Both `head` and `body`
 are required and they are the only two valid children of `html`.
 
 #### Head
@@ -146,7 +137,7 @@ to favorites/bookmarks, and what the page is titled in search-engine results.
 The `meta` element declares that the *charset* or set of characters used in this
 document is **utf-8** which includes most characters from all known human
 languages. This is not required but can avoid some problems you might run into
-if you use special characters.
+if you use special characters.  The charset declaration should fit completely within the first 1024 bytes at the start of the file, so it's best to put it immediately after the opening head tag.
 
 Two other meta tags that may autofill into HTML5 boilerplate:
 
@@ -155,10 +146,6 @@ Two other meta tags that may autofill into HTML5 boilerplate:
     to the width of the device and sets the scale to 1. You can read more about
     this
     [here](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW26).
-- `<meta http-equiv="X-UA-Compatible" content="ie=edge">`
-  - This is for Internet Explorer to ensure that it uses the highest mode of IE
-    available. You can read more about this
-    [here](https://msdn.microsoft.com/en-us/library/ff955275?v=vs.85.aspx).
 
 Other examples of metadata include links to external stylesheets (more later)
 and scripts to run on the page.
@@ -170,14 +157,12 @@ and scripts to run on the page.
 The `body` element contains the information actually presented to the user; it
 represents the content of the document.
 
-### Valid HTML in a file: We Do (15 minutes / 0:40)
+### Valid HTML in a file: We Do
 
 Before we start adding content to the body lets create a file locally for our
 work so we can open it.
 
-*(Note: All code for this lesson is available in [this
-repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with
-branches for each step.)*
+> Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
 
 Create a directory in your sandbox called `html-and-css`
 
@@ -194,17 +179,26 @@ touch index.html
 code .
 ```
 
-Go ahead and type the boilerplate into your index.html file. Then, add p element
-to the page body and put a title into the head. (You can use the p element and
-title example from above.)
+We'll be using [Emmet](https://code.visualstudio.com/docs/editor/emmet) which gives us tools to write our html code more quickly and accurately. To create our HTML boilerplate, type `!` inside an empty document that has a `.html` extension and press the tab key.
+
+> In programming we often refer to the exclamation point as a _bang_.
+
+Next, use the tab key to navigate to the title and replace its contents.  Now you can move your cursor in between the body tags and type `p`, then press the tab key.
+
+Inside the `<p></p>` tags that were generated, type: `The easiest way to learn HTML is to use it!`.  Select the word `HTML` in the text you added and press command <kbd>⌘</kbd> + shift <kbd>shift</kbd> + <kbd>P</kbd> (or Ctrl + Shift + P on Windows machines) to bring up the command palette.   Start typing: `emmet wrap individ` and select the option that reads:  `Emmet: Wrap Individual Lines with Abbrevation`.  After you've selected this option just type `a` and press enter.   Do the same to wrap the text `is to use it!` with an `em` tag.
+
+
+![image](https://media.git.generalassemb.ly/user/17300/files/baeb7700-6e64-11ea-9796-39b2002845ea)
+
 
 Now, `index.html` should look like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML &amp; CSS</title>
 </head>
 <body>
@@ -216,19 +210,8 @@ Now, `index.html` should look like this:
 </body>
 </html>
 ```
-We can also open this file in the browser by running from the command line:
 
-```bash
-open index.html
-```
-
-Or for linux machines:
-```bash
-google-chrome index.html
-```
-
-Wow! Super dull! We'll work on making this more lively shortly but first some
-practice fixing invalid HTML.
+Cool, let's fire up a local web server and see this file in the browser.   
 
 This is valid HTML. We can confirm this by copying and pasting the code into an
 [HTML validator](https://validator.w3.org/nu/#textarea).
@@ -237,14 +220,12 @@ This is valid HTML. We can confirm this by copying and pasting the code into an
 entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the
 ampersand.)*
 
-### Exercise: You Do [HTML Fixit](https://git.generalassemb.ly/seir-1118/html-fix-it) (15 minutes / :55)
+### Exercise: You Do [HTML Fixit](../../../html-fix-it)
 
 - 10 minutes working / 5 minutes review
 - Work with a partner and write out plain English answers
 - If you finish early, add additional HTML trying to provoke various error
   messages
-
-## Break (10 mins / 1:05)
 
 ## More Elements (15 minutes / 1:20)
 
