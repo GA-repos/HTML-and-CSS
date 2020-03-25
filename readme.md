@@ -211,7 +211,9 @@ Now, `index.html` should look like this:
 </html>
 ```
 
-Cool, let's fire up a local web server and see this file in the browser.   
+Cool, let's fire up a local web server and see this file in the browser.   You may have previously opened up a html file in. the browser by simply double-clicking it or dragging it into the browser.  That technique will **not** work as we start to use features in JavaScript that are only supported on a web server.  So from this point forward, we'll be running **all** of our code using a local server.  One additional benefit of doing this is that the local server we'll be using includes _live reload_ features, so any of the changes that you make in the editor will automatically appear in the browser!
+
+At the bottom of the VS Code editor, toward the right side of the screen click the text that reads:  `Go Live`.  If you do not see the `Go Live` text at the bottom of the editor,  click the gear icon on the bottom left side of the editor or press command <kbd>⌘</kbd> + shift <kbd>shift</kbd> + <kbd>P</kbd> again to open the command palette and type: `open with live` then select the `Live Server: Open with Live Server` option from the palette. 
 
 This is valid HTML. We can confirm this by copying and pasting the code into an
 [HTML validator](https://validator.w3.org/nu/#textarea).
@@ -227,7 +229,7 @@ ampersand.)*
 - If you finish early, add additional HTML trying to provoke various error
   messages
 
-## More Elements (15 minutes / 1:20)
+## More Elements
 
 There are tons of different HTML elements and memorizing them is impractical.
 Instead, it is better to start using the 20 percent of the building blocks that
@@ -248,24 +250,18 @@ or 4.
 <h6>Wow, that's very detailed</h6>
 ```
 
-### Paragraphs
-
-The `p` tag is used for paragraphs
-
-```html
-<p>Not a ton going on here...</p>
-```
-
 ### Lists
 
 People love lists. There are two types of HTML lists, ordered and unordered.
 
 ```html
+<!-- ordered list -->
 <ol>
   <li>I'm first</li>
   <li>I'm second</li>
   <li>I'm third</li>
 </ol>
+<!-- unordered list -->
 <ul>
   <li>red</li>
   <li>green</li>
@@ -276,7 +272,6 @@ People love lists. There are two types of HTML lists, ordered and unordered.
 ### Images
 
 If there's anything people like more than lists, it's images.
-
 
 Images are **empty elements** meaning that they cannot logically have children.
 They are represented in HTML with a single, self-closing element.
@@ -317,14 +312,13 @@ image tag's source attribute a path to the image.
 
 ### Semantic HTML
 
-Besides the basic elements, there are some "new" semantic HTML elements that will make your life easier if you learn to use them.
+Besides the basic elements, there are some semantic HTML elements that are important to learn to use as professional developers.  These semantic elements will improve the structure of our pages and make it easier for the more than 285 million people around the world who cannot experience our pages visually to navigate through our content.
 
 [MDN's Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
 
 These include elements like:
 ```html
 <section>
-<content>
 <header>
 <footer>
 <nav>
@@ -333,18 +327,6 @@ These include elements like:
 ```
 
 [Reference to help you with semantic HTML](./reference/h5d-sectioning-flowchart.pdf)
-
-### Why so many elements?
-
-All of these elements have pre-defined default behavior or styling that the browser will interpret and style for you. You can see some examples of default styles by using the browser styles inspector.
-
-![chrome elements](./images/chrome-inspector-styles.png)
-
-They can all be modified using CSS to look or function in a completely different way. But don't do that! They're here to provide you a sane baseline.
-
-The real reason to use different elements is FOR YOUR OWN SAKE!
-
-Code written in this way is called **semantic HTML**. It makes it easier (for you and everyone else) to read and debug your html. It's way better than trying to debug a sea of nested `<div>` elements.
 
 #### Resources:
 
@@ -365,7 +347,7 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 - [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
 
-## Wire Framing: I do (5 minutes / 1:25)
+## Wire Framing: I do
 
 It is good practice to sketch up an approximation of what you'd like your end
 product to look like. It's alright if it's a rough approximation.
@@ -377,14 +359,12 @@ Wireframe](https://files.slack.com/files-pri/T2D6FU4JY-F60F2QWC9/image_uploaded_
 Wireframing is a helpful tool for you to plan out and visualize the layout and
 hierarchy of your content before you start coding.
 
-## Break (10 minutes / 1:50)
-
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **display** the
 elements of our document.
 
-### Websites without CSS (10 minutes / 2:00)
+### Websites without CSS
 
 So far the website we've created together has no CSS and is a little plain.
 
