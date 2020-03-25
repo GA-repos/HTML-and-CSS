@@ -645,7 +645,7 @@ page has `width`, `height`, `padding`, `margin`, and `border` properties. This
 diagram shows how these values relate to one another.
 
 ![Box
-Model](https://upload.wikimedia.org/wikipedia/commons/5/53/Css_box_model.svg)
+Model](https://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif)
 
 We can see the box for an element on our page by right-clicking the element and
 clicking **inspect**. Then find the **Styles** window, and scroll to the bottom.
