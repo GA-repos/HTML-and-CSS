@@ -188,7 +188,7 @@ Next, use the tab key to navigate to the title and replace its contents.  Now yo
 Inside the `<p></p>` tags that were generated, type: `The easiest way to learn HTML is to use it!`.  Select the word `HTML` in the text you added and press command <kbd>⌘</kbd> + shift <kbd>shift</kbd> + <kbd>P</kbd> (or Ctrl + Shift + P on Windows machines) to bring up the command palette.   Start typing: `emmet wrap individ` and select the option that reads:  `Emmet: Wrap Individual Lines with Abbrevation`.  After you've selected this option just type `a` and press enter.   Do the same to wrap the text `is to use it!` with an `em` tag.
 
 
-![image](https://media.git.generalassemb.ly/user/17300/files/baeb7700-6e64-11ea-9796-39b2002845ea)
+<img src="https://media.git.generalassemb.ly/user/17300/files/baeb7700-6e64-11ea-9796-39b2002845ea" width="300" alt="VS Code command palette" />
 
 
 Now, `index.html` should look like this:
@@ -294,8 +294,7 @@ Right click the picture and click **"Save image as..."**, give the file a
 shorter name, and make sure you save it to Downloads. I've gone with
 `html5logo.png`.
 
-![HTML5
-Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="html5 logo" width="300" />
 
 Move the file from your Downloads folder to the `html-and-css` directory.
 
@@ -347,18 +346,6 @@ MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/
 
 - [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
 
-## Wire Framing: I do
-
-It is good practice to sketch up an approximation of what you'd like your end
-product to look like. It's alright if it's a rough approximation.
-
-![Rough
-Wireframe](https://files.slack.com/files-pri/T2D6FU4JY-F60F2QWC9/image_uploaded_from_ios.jpg?pub_secret=41dba35dd8)
-...very rough approximation.
-
-Wireframing is a helpful tool for you to plan out and visualize the layout and
-hierarchy of your content before you start coding.
-
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **display** the
@@ -366,18 +353,11 @@ elements of our document.
 
 ### Websites without CSS
 
-So far the website we've created together has no CSS and is a little plain.
-
-Let's look at some websites and take away their CSS and see how dull and plain
-they become.  Note that the content will still be the same, just the *styling*
-will be different.  
-
-- Now lets checkout [CSS Zen Garden](http://www.csszengarden.com) to see some
-  examples of the great power and diversity that CSS can have on a website.  
+So far the website we've created together has only the default styles that the browser applies. Let's checkout [CSS Zen Garden](http://www.csszengarden.com) to see some examples of the great power and diversity that CSS can have on a website.  
 
 > Optional: You can use the chrome extension called [web developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en-US) to disable css on any site. If you want to.
 
-### CSS File: We do (5 minutes / 1:55)
+### CSS File: We do
 
 To get started writing styles we will create a new file.
 
@@ -410,7 +390,7 @@ Note: There are three ways to write CSS into your HTML file.
 - **Internal** (Better) ==> `<style>` element in `<head>` of html file
 - **External** (Best!) ==> linking an external CSS file
 
-### CSS Rules (5 minutes / 2:00)
+### CSS Rules 
 
 CSS styles are a series of **rules** or **rulesets**. A rule is a combination of
 a **selector** and a set of **declarations**.
@@ -418,7 +398,7 @@ a **selector** and a set of **declarations**.
 ![Anatomy of a CSS
 Ruleset](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
 
-## Selector (10 minutes / 2:10)
+## Selector 
 
 A selector is a pattern used to match HTML elements to the rule that should
 apply. As shown, a selector can be an element. Or, very commonly, we add `class`
@@ -450,7 +430,7 @@ specific.
 
 CSS can also overwrite itself. For example, if you have two rules that have the same precedence (like two classes), the one that appears further down in the file will overwrite the previous one.
 
-### Classes/IDs: I Do (5 min / 2:15)
+### Classes/IDs 
 
 Add the following to HTML file:
 
@@ -486,11 +466,11 @@ Selectors can be combined and related and there are many more types of
 **Bonus**: Especially interesting are [pseudo class
 selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements).
 
-### Exercise: You do [CSS Diner](http://flukeout.github.io/) (20 min / 2:20)
+### Exercise: You do [CSS Diner](http://flukeout.github.io/)
 
 - 15 minutes working / 5 minutes review
 
-### Declaration (10 minutes / 2:30)
+### Declaration 
 
 A declaration has two parts, a property and a value to which that property
 should be set. In the example above, the property is `color` and the property value is `red`.
@@ -499,9 +479,7 @@ There must be a colon separating each property from its property value and a
 semicolon at the end of the declaration. By adding just that rule to our CSS and
 refreshing the page in the browser, we can see the effect of the rule.
 
-## Break (10 minutes / 2:40)
-
-### Properties (20 minutes / 3:00)
+### Properties 
 
 Like HTML elements, there are tons of css properties and it is impractical to
 memorize them. Again we're looking for the 20% that gets us 80% of the way.
@@ -660,7 +638,7 @@ properties can be used to adjust space around text.
 Next we want to fix the obnoxiously large image but first we should review how
 elements relate to space with the **box model**.
 
-## Box Model: I do (10 minutes / 3:10)
+## Box Model
 
 The browser represents HTML elements on the page as blocks. Every block on the
 page has `width`, `height`, `padding`, `margin`, and `border` properties. This
@@ -693,7 +671,7 @@ img {
 }
 ```
 
-## Taking Up Space: Inline vs Block Elements, and How to Center Content (10 minutes / 3:20)
+## Taking Up Space: Inline vs Block Elements, and How to Center Content
 
 Typically, elements are either **inline** or **block** elements.  We can change
 this with the `display` property, and the four values we can assign it.  
@@ -844,6 +822,16 @@ There are many many more CSS properties and nearly no limit to what CSS will let
 us do but these building blocks will take us a very long way. Check out the
 significant difference just this bit of CSS has made.
 
+## Common CSS Units of Measurement
+
+|  Unit  |  Description  |   Usage  |
+|:----------:|:----------------:|:------------:|
+|   px   | Referred to as absolute units because px (pixel) units will always be the same size regardless of any other related settings. | Most frequently with font sizes, margins, padding, max- and min- properties. |
+|  em, rem | Relative to the current element's font-size (em), or the _root_ font-size (rem). When used to set the font-size of an element, em is relative to the element's inherited size. | Most frequently with font sizes, margins, padding, widths or heights that may need to be changed but remain relative to other elements. |
+|  vh, vw  | Relative to the viewport width (vw), where one unit is equal to 1/100th of the viewport's current width, or the viewport height (vh), where one unit is equal to 1/100th of the viewport's current height. | Most frequently with width and height of structural page elements. Commonly used in responsive design. |
+|   %   | Percentages are relative values. What the percentage is relative to, is determined by the property associated with the percentage value. | Most often used with width. Can be helpful to approximate intrisic sizing. |
+
+
 ## Importing Fonts: You do (Bonus)
 
 Google hosts a massive repository of fonts that can be imported for use on your
@@ -877,6 +865,6 @@ learn more about layout in CSS.
 
 > or this crazy complex [pure css art](https://github.com/cyanharlow/purecss-francine)
 
-## Bonus Exercise: [Fashion Blog](https://git.generalassemb.ly/seir-129/fashion-blog)
+## Bonus Exercise: [Fashion Blog](../../../fashion-blog)
 
-## Bonus Exercise: [Hippie Portfolio](https://git.generalassemb.ly/seir-129/hippy-portfolio)
+## Bonus Exercise: [Hippie Portfolio](../../../hippy-portfolio)
