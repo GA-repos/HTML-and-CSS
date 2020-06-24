@@ -31,8 +31,6 @@ do they relate to one another.
 
 HTML expresses the **structure and semantics** of a document in plain text.
 
-[Reference to help you with HTML](./reference/html-tags.pdf)
-
 ### Elements: I do 
 
 ![Parts of an
