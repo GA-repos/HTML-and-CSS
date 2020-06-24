@@ -382,9 +382,9 @@ When we refresh the page, we should see the background color change.
 
 Note: There are three ways to write CSS into your HTML file.
 
-- **Inline** (Good) ==> `<p style="background: blue;">Inline Example</p> `
-- **Internal** (Better) ==> `<style>` element in `<head>` of html file
-- **External** (Best!) ==> linking an external CSS file
+- **Inline** ==> `<p style="background: blue;">Inline Example</p>` 
+- **Internal** ==> `<style>` element in `<head>` of html file
+- **External** ==> linking an external CSS file
 
 ### CSS Rules 
 
@@ -499,9 +499,7 @@ body {
 }
 ```
 
-**BONUS** just adding textures to a site's background can make a huge difference
-as well. A great resource for free patterns is [Transparent
-Textures](https://www.transparenttextures.com/)
+**BONUS** The background property can also be set to a [linear gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) or [radial gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient) which can even be used to produce [amazing repeating patterns](https://leaverou.github.io/css3patterns/).
 
 #### [Text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 
