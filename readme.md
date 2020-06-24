@@ -342,8 +342,6 @@ MDN list of inline HTML elements (https://developer.mozilla.org/en-US/docs/Web/H
 MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
 ```
 
-- [Solution](https://github.com/ga-wdi-exercises/html-css-in-class/blob/add-content/index.html)
-
 ## CSS (Cascading Style Sheets)
 
 We use CSS to tell browsers how we would like for them to **display** the
