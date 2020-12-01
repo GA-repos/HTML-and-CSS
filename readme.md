@@ -160,7 +160,6 @@ represents the content of the document.
 Before we start adding content to the body lets create a file locally for our
 work so we can open it.
 
-> Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
 
 Create a directory in your sandbox called `html-and-css`
 
@@ -226,6 +225,17 @@ ampersand.)*
 - Work with a partner and write out plain English answers
 - If you finish early, add additional HTML trying to provoke various error
   messages
+
+## DevTools
+
+
+You can bring up the Development Tools (DevTools) with the command:
+- Command + Option + J (⌘ + ⌥ + J)  (MAC)
+- F12 (Windows)
+- Right click > Inspect
+
+And should see something that looks like this:
+<img src="images/dev-tools-sut-1.JPG" height="400px">
 
 ## More Elements
 
@@ -307,40 +317,6 @@ image tag's source attribute a path to the image.
 <img src="html5logo.png" alt="html5 logo" >
 ```
 
-### Semantic HTML
-
-Besides the basic elements, there are some semantic HTML elements that are important to learn to use as professional developers.  These semantic elements will improve the structure of our pages and make it easier for the more than 285 million people around the world who cannot experience our pages visually to navigate through our content.
-
-[MDN's Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)*
-
-These include elements like:
-```html
-<section>
-<header>
-<footer>
-<nav>
-<main>
-
-```
-
-[Reference to help you with semantic HTML](./reference/h5d-sectioning-flowchart.pdf)
-
-#### Resources:
-
-```
-Good Strategies
-===============
-Imitation
-Repetition
-Inspection
-Reflection
-
-Good Links
-==========
-MDN HTML Tutorials (https://developer.mozilla.org/en-US/docs/Learn/HTML)
-MDN list of inline HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
-MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
-```
 
 ## CSS (Cascading Style Sheets)
 
@@ -603,34 +579,13 @@ h1 {
 Keep in mind the text-align property will only work on text. We will cover
 layout of other elements below in the discussion of the box model.
 
-#### [Line Height](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Line_height)
 
-The line height property sets the size of each line. The property value accepts
-any unit but is frequently seen without a unit meaning relative to the size of
-the font (i.e. `2` is double spaced, `1.5` is one and a half)
-
-The default line height of `1` is a little squished. Let's up that to `1.2` by
-adding a declaration to the `body` rule:
-
-```css
-body {
-  color: #444;
-  background: #F5F5F5;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.3;
-}
-```
 
 Note: We see the space following the headings growing but it would be much more
 obvious with multiline paragraphs. When we need more text than we have, we can
 use [Lorem Ipsum](http://www.lipsum.com/) as filler.
 
-**BONUS** Similar to line-height, the [word-spacing and
-letter-spacing](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Letter_and_word_spacing)
-properties can be used to adjust space around text.
 
-Next we want to fix the obnoxiously large image but first we should review how
-elements relate to space with the **box model**.
 
 ## Box Model
 
@@ -812,18 +767,7 @@ want more sub-containers for visual purposes. The generic block element used for
 these purposes is the `div`. We'll see more `div`s when we talk about using
 flex-box for advanced alignment.
 
-There are many many more CSS properties and nearly no limit to what CSS will let
-us do but these building blocks will take us a very long way. Check out the
-significant difference just this bit of CSS has made.
 
-## Common CSS Units of Measurement
-
-|  Unit  |  Description  |   Usage  |
-|:----------:|:----------------:|:------------:|
-|   px   | Referred to as absolute units because px (pixel) units will always be the same size regardless of any other related settings. | Most frequently with font sizes, margins, padding, max- and min- properties. |
-|  em, rem | Relative to the current element's font-size (em), or the _root_ font-size (rem). When used to set the font-size of an element, em is relative to the element's inherited size. | Most frequently with font sizes, margins, padding, widths or heights that may need to be changed but remain relative to other elements. |
-|  vh, vw  | Relative to the viewport width (vw), where one unit is equal to 1/100th of the viewport's current width, or the viewport height (vh), where one unit is equal to 1/100th of the viewport's current height. | Most frequently with width and height of structural page elements. Commonly used in responsive design. |
-|   %   | Percentages are relative values. What the percentage is relative to, is determined by the property associated with the percentage value. | Most often used with width. Can be helpful to approximate intrisic sizing. |
 
 
 ## Importing Fonts: You do (Bonus)
@@ -862,3 +806,57 @@ learn more about layout in CSS.
 ## Bonus Exercise: [Fashion Blog](../../../fashion-blog)
 
 ## Bonus Exercise: [Hippie Portfolio](../../../hippy-portfolio)
+
+## Additional Resources
+
+There are many many more CSS properties and nearly no limit to what CSS will let
+us do but these building blocks will take us a very long way. Check out the
+significant difference just this bit of CSS has made.
+
+#### Common CSS Units of Measurement
+
+|  Unit  |  Description  |   Usage  |
+|:----------:|:----------------:|:------------:|
+|   px   | Referred to as absolute units because px (pixel) units will always be the same size regardless of any other related settings. | Most frequently with font sizes, margins, padding, max- and min- properties. |
+|  em, rem | Relative to the current element's font-size (em), or the _root_ font-size (rem). When used to set the font-size of an element, em is relative to the element's inherited size. | Most frequently with font sizes, margins, padding, widths or heights that may need to be changed but remain relative to other elements. |
+|  vh, vw  | Relative to the viewport width (vw), where one unit is equal to 1/100th of the viewport's current width, or the viewport height (vh), where one unit is equal to 1/100th of the viewport's current height. | Most frequently with width and height of structural page elements. Commonly used in responsive design. |
+|   %   | Percentages are relative values. What the percentage is relative to, is determined by the property associated with the percentage value. | Most often used with width. Can be helpful to approximate intrisic sizing. |
+
+#### [Line Height](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Line_height)
+
+The line height property sets the size of each line. The property value accepts
+any unit but is frequently seen without a unit meaning relative to the size of
+the font (i.e. `2` is double spaced, `1.5` is one and a half)
+
+The default line height of `1` is a little squished. Let's up that to `1.2` by
+adding a declaration to the `body` rule:
+
+```css
+body {
+  color: #444;
+  background: #F5F5F5;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+}
+```
+
+**BONUS** Similar to line-height, the [word-spacing and
+letter-spacing](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Letter_and_word_spacing)
+properties can be used to adjust space around text.
+
+
+```
+Good Strategies for Semantic Web Elements
+===============
+Imitation
+Repetition
+Inspection
+Reflection
+
+Good Links
+==========
+MDN HTML Tutorials (https://developer.mozilla.org/en-US/docs/Learn/HTML)
+MDN list of inline HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
+MDN list of block level HTML elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+```
+[Reference to help you with semantic HTML](./reference/h5d-sectioning-flowchart.pdf)
