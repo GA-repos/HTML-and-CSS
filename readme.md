@@ -219,7 +219,7 @@ This is valid HTML. We can confirm this by copying and pasting the code into an
 entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for the
 ampersand.)*
 
-### Exercise: You Do [HTML Fixit](../html-fix-it)
+### Exercise: You Do [HTML Fixit](../../../html-fix-it)
 
 - 10 minutes working / 5 minutes review
 - Work with a partner and write out plain English answers
