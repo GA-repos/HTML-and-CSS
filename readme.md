@@ -803,8 +803,6 @@ learn more about layout in CSS.
 
 > or this crazy complex [pure css art](https://github.com/cyanharlow/purecss-francine)
 
-## Bonus Exercise: [Hippie Portfolio](../../../hippy-portfolio)
-
 ## Additional Resources
 
 There are many many more CSS properties and nearly no limit to what CSS will let
