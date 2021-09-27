@@ -1,3 +1,5 @@
+## SEIR 928, September 29, 2021
+
 # HTML & CSS
 
 ## Learning Objectives
